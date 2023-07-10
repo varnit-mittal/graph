@@ -40,4 +40,7 @@ int main()
         mp[a]=b;
     }
     cout << minMoves(mp) << endl;
+    // cout << INT_MAX<< endl;
+    // int c=  INT_MAX+1;
+    // cout << c <<endl;
 }

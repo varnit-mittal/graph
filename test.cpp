@@ -75,36 +75,41 @@ void minSweets_utils(unordered_map<int, vector<int>> &mp, int mid, int dest, vec
 
 int main()
 {
-    int n, m, mid;
-    cin >> n >> m >> mid;
-    mid--;
-    vector<int> sweets;
-    for (int i = 0; i < n; i++)
-    {
-        int a;
-        cin >> a;
-        sweets.push_back(a);
-    }
-    unordered_map<int, vector<pair<int, int>>> mp;
-    unordered_map<int, vector<int>> route;
-    for (int i = 0; i < m; i++)
-    {
-        int a, b;
-        cin >> a >> b;
-        a--;
-        b--;
-        addNode(route, a, b);
-        addNode2(mp, a, b);
-    }
-    vector<int> dist = dijkstra(mp, n, mid);
-    vector<int> val;
-    for (int i = 0; i < n; i++)
-    {
-        minSweets_utils(route, mid, i, val, sweets, n, dist);
-    }
-    for (int i = 0; i < n; i++)
-    {
-        cout << val[i] << " ";
-    }
-    cout << endl;
+	int t;
+	cin >>t;
+	while(t--)
+	{
+		int n, m, mid;
+		cin >> n >> m >> mid;
+		mid--;
+		vector<int> sweets;
+		for (int i = 0; i < n; i++)
+		{
+			int a;
+			cin >> a;
+			sweets.push_back(a);
+		}
+		unordered_map<int, vector<pair<int, int>>> mp;
+		unordered_map<int, vector<int>> route;
+		for (int i = 0; i < m; i++)
+		{
+			int a, b;
+			cin >> a >> b;
+			a--;
+			b--;
+			addNode(route, a, b);
+			addNode2(mp, a, b);
+		}
+		vector<int> dist = dijkstra(mp, n, mid);
+		vector<int> val;
+		for (int i = 0; i < n; i++)
+		{
+			minSweets_utils(route, mid, i, val, sweets, n, dist);
+		}
+		for (int i = 0; i < n; i++)
+		{
+			cout << val[i] << " ";
+		}
+		cout << endl;
+	}
 }

@@ -5,6 +5,15 @@
         "ostream": "cpp",
         "iostream": "cpp",
         "unordered_set": "cpp",
-        "xhash": "cpp"
+        "xhash": "cpp",
+        "utility": "cpp",
+        "numbers": "cpp",
+        "xstring": "cpp",
+        "xtree": "cpp",
+        "xutility": "cpp",
+        "deque": "cpp",
+        "format": "cpp",
+        "list": "cpp",
+        "algorithm": "cpp"
     }
 }
